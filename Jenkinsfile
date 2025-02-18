@@ -3,7 +3,10 @@ pipeline {
   stages {
     stage('') {
       steps {
-        echo 'hello'
+        node(label: 'agent') {
+          echo 'echo hello'
+        }
+
       }
     }
 
